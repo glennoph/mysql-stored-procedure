@@ -1,0 +1,13 @@
+version: '3'
+services:
+  db:
+    image: mysql
+    ports:
+      - '3306:3306'
+    volumes:
+      - './datadir/db:/var/lib/mysql'
+    environment:
+      MYSQL_ROOT_PASSWORD: data22
+      MYSQL_DATABASE: mydb
+      MYSQL_USER: user
+      MYSQL_PASSWORD: dbpass22
