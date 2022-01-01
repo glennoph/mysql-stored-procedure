@@ -1,13 +1,13 @@
-version: '3'
+version: '3.1'
 services:
   db:
     image: mysql
     ports:
-      - '3306:3306'
+      - 33066:3306
     volumes:
-      - './datadir/db:/var/lib/mysql'
+      - ./.data:/var/lib/mysql
     environment:
-      MYSQL_ROOT_PASSWORD: data22
+      MYSQL_ROOT_PASSWORD: root
       MYSQL_DATABASE: mydb
       MYSQL_USER: user
-      MYSQL_PASSWORD: dbpass22
+      MYSQL_PASSWORD: pass
